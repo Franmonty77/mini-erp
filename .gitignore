@@ -1,0 +1,17 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Dependencies
+vendor/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Local configuration (optional, but good practice if it has secrets)
+# app/config/database.php
