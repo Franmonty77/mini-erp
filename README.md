@@ -14,6 +14,8 @@ Un sistema de gestión simple (ERP) construido con PHP nativo y MySQL, siguiendo
     - Crea una base de datos llamada `mini_erp` en tu MySQL local.
     - Ejecuta el script de migración para crear la tabla de usuarios:
       `database/migrations/001_create_users_table.sql`
+    - Ejecuta el script para la tabla de clientes/proveedores:
+      `database/migrations/002_create_partners_table.sql`
 
 2. **Configuración**
     - El archivo de configuración principal está en `app/config/config.php`.
@@ -22,6 +24,11 @@ Un sistema de gestión simple (ERP) construido con PHP nativo y MySQL, siguiendo
 ## Login
 
 El sistema cuenta con autenticación de usuarios.
+25: 
+26: ## Funcionalidades
+27: 
+28: - **Autenticación**: Login y sesiones seguras.
+29: - **Clientes / Proveedores**: CRUD completo con buscador para gestionar socios comerciales.
 
 
 
@@ -39,6 +46,8 @@ mini-erp/
 │   ├── index.php    # Página de inicio (Dashboard)
 │   ├── login.php    # Formulario de login
 │   ├── logout.php   # Lógica de cierre de sesión
+│   ├── partners.php # Controlador de Clientes/Proveedores
+
 ```
 
 ## Desarrollo

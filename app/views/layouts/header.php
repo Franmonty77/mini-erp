@@ -13,6 +13,7 @@
   <div class="container">
     <a class="navbar-brand" href="<?= BASE_URL ?>/index.php"><?= APP_NAME ?></a>
       <?php if (auth_check()): ?>
+          <a class="btn btn-link text-white text-decoration-none me-3" href="<?= BASE_URL ?>/partners.php">Clientes/Proveedores</a>
           <span class="navbar-text text-white me-3">Hola, <?= htmlspecialchars($_SESSION['user_name'] ?? 'Usuario') ?></span>
           <a class="btn btn-outline-light btn-sm" href="<?= BASE_URL ?>/logout.php">Cerrar Sesión</a>
       <?php else: ?>
