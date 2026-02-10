@@ -16,6 +16,8 @@ Un sistema de gestión simple (ERP) construido con PHP nativo y MySQL, siguiendo
       `database/migrations/001_create_users_table.sql`
     - Ejecuta el script para la tabla de clientes/proveedores:
       `database/migrations/002_create_partners_table.sql`
+    - Ejecuta el script para la tabla de facturas:
+      `database/migrations/003_create_invoices_table.sql`
 
 2. **Configuración**
     - El archivo de configuración principal está en `app/config/config.php`.
@@ -24,11 +26,11 @@ Un sistema de gestión simple (ERP) construido con PHP nativo y MySQL, siguiendo
 ## Login
 
 El sistema cuenta con autenticación de usuarios.
-25: 
-26: ## Funcionalidades
-27: 
-28: - **Autenticación**: Login y sesiones seguras.
-29: - **Clientes / Proveedores**: CRUD completo con buscador para gestionar socios comerciales.
+## Funcionalidades
+
+- **Autenticación**: Login y sesiones seguras.
+- **Clientes / Proveedores**: CRUD completo con buscador para gestionar socios comerciales.
+- **Facturas**: Gestión de facturas emitidas y recibidas con control de estados (pendiente/pagada) y fechas de vencimiento.
 
 
 
@@ -47,6 +49,7 @@ mini-erp/
 │   ├── login.php    # Formulario de login
 │   ├── logout.php   # Lógica de cierre de sesión
 │   ├── partners.php # Controlador de Clientes/Proveedores
+│   ├── invoices.php # Controlador de Facturas
 
 ```
 
