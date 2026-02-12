@@ -31,6 +31,7 @@ El sistema cuenta con autenticación de usuarios.
 - **Autenticación**: Login y sesiones seguras.
 - **Clientes / Proveedores**: CRUD completo con buscador para gestionar socios comerciales.
 - **Facturas**: Gestión de facturas emitidas y recibidas con control de estados (pendiente/pagada) y fechas de vencimiento.
+- **Dashboard**: Panel de control principal con KPIs en tiempo real (Facturas Pendientes, Pagadas y Vencidas).
 
 
 
