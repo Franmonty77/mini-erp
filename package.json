@@ -1,0 +1,28 @@
+{
+  "name": "mini-erp",
+  "version": "1.0.0",
+  "description": "Un sistema de gestión simple (ERP) construido con PHP nativo y MySQL, siguiendo una estructura MVC básica.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./styles/input.css -o ./public/css/output.css --watch",
+    "build": "tailwindcss -i ./styles/input.css -o ./public/css/output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Franmonty77/mini-erp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Franmonty77/mini-erp/issues"
+  },
+  "homepage": "https://github.com/Franmonty77/mini-erp#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.0",
+    "autoprefixer": "^10.4.24",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.0"
+  }
+}

@@ -1,48 +1,56 @@
-<div class="row justify-content-center">
-    <div class="col-md-8">
-        <div class="card shadow-sm">
-            <div class="card-header bg-warning text-dark">
-                <h5 class="card-title mb-0">Editar Cliente / Proveedor</h5>
-            </div>
-            <div class="card-body">
-                <form action="<?= BASE_URL ?>/partners.php?action=update" method="POST">
-                    <input type="hidden" name="id" value="<?= $partner['id'] ?>">
+<div class="sm:flex sm:items-center sm:justify-between mb-6">
+    <h1 class="text-2xl font-semibold leading-6 text-gray-900">Editar Cliente / Proveedor</h1>
+    <?= ui_button('Volver', 'secondary', 'arrow-left', ['href' => BASE_URL . '/partners.php', 'tag' => 'a']) ?>
+</div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Tipo</label>
-                        <select name="type" class="form-select" required>
+<div class="bg-white shadow sm:rounded-lg">
+    <div class="px-4 py-5 sm:p-6">
+        <form action="<?= BASE_URL ?>/partners.php?action=update" method="POST" class="space-y-6">
+            <input type="hidden" name="id" value="<?= $partner['id'] ?>">
+
+            <div class="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2">
+                <div>
+                    <label for="type" class="block text-sm font-medium leading-6 text-gray-900">Tipo</label>
+                    <div class="mt-2">
+                        <select name="type" id="type" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-slate-600 sm:text-sm sm:leading-6">
                             <option value="client" <?= $partner['type'] === 'client' ? 'selected' : '' ?>>Cliente</option>
                             <option value="supplier" <?= $partner['type'] === 'supplier' ? 'selected' : '' ?>>Proveedor</option>
                         </select>
                     </div>
+                </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Nombre</label>
-                        <input type="text" name="name" class="form-control" value="<?= htmlspecialchars($partner['name']) ?>" required>
+                <div>
+                    <label for="name" class="block text-sm font-medium leading-6 text-gray-900">Nombre</label>
+                    <div class="mt-2">
+                        <input type="text" name="name" id="name" value="<?= htmlspecialchars($partner['name']) ?>" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-600 sm:text-sm sm:leading-6">
                     </div>
+                </div>
 
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Email</label>
-                            <input type="email" name="email" class="form-control" value="<?= htmlspecialchars($partner['email'] ?? '') ?>">
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label class="form-label">Teléfono</label>
-                            <input type="text" name="phone" class="form-control" value="<?= htmlspecialchars($partner['phone'] ?? '') ?>">
-                        </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email</label>
+                    <div class="mt-2">
+                        <input type="email" name="email" id="email" value="<?= htmlspecialchars($partner['email'] ?? '') ?>" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-600 sm:text-sm sm:leading-6">
                     </div>
+                </div>
 
-                    <div class="mb-3">
-                        <label class="form-label">Dirección</label>
-                        <textarea name="address" class="form-control" rows="3"><?= htmlspecialchars($partner['address'] ?? '') ?></textarea>
+                <div>
+                    <label for="phone" class="block text-sm font-medium leading-6 text-gray-900">Teléfono</label>
+                    <div class="mt-2">
+                        <input type="text" name="phone" id="phone" value="<?= htmlspecialchars($partner['phone'] ?? '') ?>" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-600 sm:text-sm sm:leading-6">
                     </div>
+                </div>
 
-                    <div class="d-flex justify-content-end gap-2">
-                        <a href="<?= BASE_URL ?>/partners.php" class="btn btn-secondary">Cancelar</a>
-                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                <div class="sm:col-span-2">
+                    <label for="address" class="block text-sm font-medium leading-6 text-gray-900">Dirección</label>
+                    <div class="mt-2">
+                        <textarea name="address" id="address" rows="3" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-600 sm:text-sm sm:leading-6"><?= htmlspecialchars($partner['address'] ?? '') ?></textarea>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
+
+            <div class="flex items-center justify-end gap-x-6 border-t border-gray-900/10 pt-4">
+                 <?= ui_button('Actualizar', 'primary', 'check', ['type' => 'submit']) ?>
+            </div>
+        </form>
     </div>
 </div>

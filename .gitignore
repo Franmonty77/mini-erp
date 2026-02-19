@@ -1,17 +1,44 @@
-# System files
+# Dependencias
+/vendor/
+/node_modules/
+
+
+# Entorno y Configuración
+.env
+.env.backup
+.env.local
+.env.testing
+
+# Archivos del Sistema Operativo
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Logs
-logs/
+/logs/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Dependencies
-vendor/
-
-# IDE settings
-.vscode/
+# IDE y Editor
 .idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
 
-# Local configuration (optional, but good practice if it has secrets)
-# app/config/database.php
+# Almacenamiento y Temporales
+/storage/*
+!/storage/.gitignore
+/tmp/
+/temp/
+
+# Caché y compilados de PHPUnit
+.phpunit.result.cache
+/phpunit.xml
+
+# Compilados de Frontend (opcional si usas build system)
+# /public/build
+# /public/hot
